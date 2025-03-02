@@ -1,0 +1,9 @@
+<!-- album-photos.component.html -->
+<h2>Album Photos</h2>
+<button (click)="goBack()">Return</button>
+<div class="photos-grid">
+  <div *ngFor="let photo of photos" class="photo-item">
+    <h3>{{ photo.title }}</h3>
+    <img [src]="photo.url" [alt]="photo.title">
+  </div>
+</div>

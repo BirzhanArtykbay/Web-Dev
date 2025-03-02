@@ -1,0 +1,9 @@
+<h2>Albums</h2>
+<div class="albums-list">
+  <div *ngFor="let album of albums"
+       class="album-item"
+       (click)="navigateToDetail(album.id)">
+    <span>{{ album.id }}: {{ album.title }}</span>
+    <button (click)="deleteAlbum(album.id, $event)">Delete</button>
+  </div>
+</div>
